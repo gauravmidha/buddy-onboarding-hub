@@ -212,25 +212,29 @@ export default function Home() {
             </div>
 
             {/* Main Headline */}
-            <div className="mb-8 animate-fade-in-up">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+            <div className="mb-12 animate-fade-in-up">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
                 Get new hires productive{' '}
                 <span className="bg-gradient-to-r from-orange-600 via-[#e99f75] to-red-600 bg-clip-text text-transparent">
                   40% faster
                 </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto font-medium">
+        </h1>
+              <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto font-medium mb-4">
                 with AI-powered onboarding.
+              </p>
+              {/* New Value Prop Sub-headline */}
+              <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto font-medium animate-fade-in-up animation-delay-100">
+                Simplify HR workflows and give employees a smoother start from day one.
               </p>
             </div>
 
             {/* Enhanced Subheadline */}
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 leading-relaxed">
               Everything you need to onboard faster: automated checklists, AI guidance, and real-time progress tracking.
             </p>
 
             {/* Trust Indicators */}
-            <div className="mb-8 animate-fade-in-up animation-delay-300">
+            <div className="mb-12 animate-fade-in-up animation-delay-300">
               <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 font-medium">Trusted by growing teams worldwide</p>
               <div className="flex justify-center items-center space-x-8 opacity-70">
                 <div className="text-gray-500 dark:text-gray-400 font-semibold text-lg hover:text-[#e99f75] transition-colors duration-200">Stripe</div>
@@ -240,43 +244,47 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Built by Zenafide */}
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-8 animate-fade-in-up animation-delay-400">
-              Built with ❤️ by <span className="font-semibold text-[#e99f75] dark:text-[#e99f75]">Zenafide</span>
-            </p>
-
             {!isAuthenticated ? (
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fade-in-up animation-delay-500">
+              <div className="mb-8 animate-fade-in-up animation-delay-500">
                 {/* Primary CTA */}
-                <button
-                  onClick={() => setShowLoginModal(true)}
-                  className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-600 to-[#e99f75] hover:from-orange-700 hover:to-[#e99f75] text-white text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover:glow-orange"
-                  aria-label="Start your onboarding journey in minutes"
-                  title="Start your onboarding journey in minutes"
-                >
-                  <Sparkles className="w-6 h-6 mr-3 group-hover:animate-pulse" />
-                  🚀 Start Onboarding
-                  <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform duration-200" />
-                </button>
+                <div className="flex justify-center mb-6">
+                  <button
+                    onClick={() => setShowLoginModal(true)}
+                    className="group inline-flex items-center px-10 py-5 bg-gradient-to-r from-orange-600 to-[#e99f75] hover:from-orange-700 hover:to-[#e99f75] text-white text-xl font-bold rounded-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 hover:glow-orange"
+                    aria-label="Start your onboarding journey in minutes"
+                    title="Start your onboarding journey in minutes"
+                  >
+                    <Sparkles className="w-7 h-7 mr-3 group-hover:animate-pulse" />
+                    🚀 Start Onboarding
+                    <ArrowRight className="w-7 h-7 ml-3 group-hover:translate-x-1 transition-transform duration-200" />
+                  </button>
+                </div>
 
                 {/* Secondary CTAs */}
-                <button
-                  onClick={() => setShowLoginModal(true)}
-                  className="group inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-gray-600 hover:border-[#e99f75] dark:hover:border-[#e99f75] text-gray-700 dark:text-gray-300 hover:text-[#e99f75] dark:hover:text-[#e99f75] font-medium rounded-lg transition-all duration-200 hover:shadow-md"
-                  aria-label="Access HR Dashboard"
-                >
-                  <span className="text-lg mr-2">👩‍💼</span>
-                  HR Dashboard
-                </button>
+                <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+                  <button
+                    onClick={() => setShowLoginModal(true)}
+                    className="group inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-gray-600 hover:border-[#e99f75] dark:hover:border-[#e99f75] text-gray-700 dark:text-gray-300 hover:text-[#e99f75] dark:hover:text-[#e99f75] font-medium rounded-lg transition-all duration-200 hover:shadow-md"
+                    aria-label="Access HR Dashboard"
+                  >
+                    <span className="text-lg mr-2">👩‍💼</span>
+                    HR Dashboard
+                  </button>
 
-                <button
-                  onClick={() => setShowLoginModal(true)}
-                  className="group inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-gray-600 hover:border-[#e99f75] dark:hover:border-[#e99f75] text-gray-700 dark:text-gray-300 hover:text-[#e99f75] dark:hover:text-[#e99f75] font-medium rounded-lg transition-all duration-200 hover:shadow-md"
-                  aria-label="Access Employee Portal"
-                >
-                  <span className="text-lg mr-2">👨‍💻</span>
-                  Employee Portal
-                </button>
+                  <button
+                    onClick={() => setShowLoginModal(true)}
+                    className="group inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-gray-600 hover:border-[#e99f75] dark:hover:border-[#e99f75] text-gray-700 dark:text-gray-300 hover:text-[#e99f75] dark:hover:text-[#e99f75] font-medium rounded-lg transition-all duration-200 hover:shadow-md"
+                    aria-label="Access Employee Portal"
+                  >
+                    <span className="text-lg mr-2">👨‍💻</span>
+                    Employee Portal
+                  </button>
+                </div>
+
+                {/* Built by Zenafide */}
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-8 text-center animate-fade-in-up animation-delay-400">
+                  Built with ❤️ by <span className="font-semibold text-[#e99f75] dark:text-[#e99f75]">Zenafide</span>
+                </p>
               </div>
             ) : (
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl border border-gray-200 dark:border-gray-700 max-w-md mx-auto mb-10">
@@ -317,109 +325,114 @@ export default function Home() {
             )}
 
             {/* Enhanced Stats Section */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto animate-fade-in-up animation-delay-600">
-              <div className="group text-center p-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl border border-orange-200/50 dark:border-orange-800/50 hover:shadow-xl hover:scale-105 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-orange-200 dark:from-orange-900/50 dark:to-orange-800/50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-200">
-                  <Building2 className="w-8 h-8 text-orange-600" />
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto animate-fade-in-up animation-delay-600">
+              <div className="group text-center p-8 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl border border-orange-200/60 dark:border-orange-800/60 hover:shadow-2xl hover:scale-110 transition-all duration-500 hover:border-orange-300 dark:hover:border-orange-600">
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-500 dark:from-orange-600 dark:to-orange-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-125 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                  <Building2 className="w-10 h-10 text-white" />
                 </div>
-                <div className="text-4xl md:text-5xl font-bold text-orange-600 mb-2">{animatedStats.companies}+</div>
-                <div className="text-gray-600 dark:text-gray-300 text-sm font-medium">Companies</div>
+                <div className="text-5xl md:text-6xl font-bold text-orange-600 mb-3 group-hover:text-orange-700 transition-colors duration-300">{animatedStats.companies}+</div>
+                <div className="text-gray-700 dark:text-gray-300 text-base font-semibold">Companies</div>
               </div>
 
-              <div className="group text-center p-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl border border-green-200/50 dark:border-green-800/50 hover:shadow-xl hover:scale-105 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 dark:from-green-900/50 dark:to-green-800/50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-200">
-                  <Users className="w-8 h-8 text-green-600" />
+              <div className="group text-center p-8 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl border border-green-200/60 dark:border-green-800/60 hover:shadow-2xl hover:scale-110 transition-all duration-500 hover:border-green-300 dark:hover:border-green-600">
+                <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-green-500 dark:from-green-600 dark:to-green-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-125 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                  <Users className="w-10 h-10 text-white" />
                 </div>
-                <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">{Math.floor(animatedStats.newHires / 1000)}K+</div>
-                <div className="text-gray-600 dark:text-gray-300 text-sm font-medium">New Hires</div>
+                <div className="text-5xl md:text-6xl font-bold text-green-600 mb-3 group-hover:text-green-700 transition-colors duration-300">{Math.floor(animatedStats.newHires / 1000)}K+</div>
+                <div className="text-gray-700 dark:text-gray-300 text-base font-semibold">New Hires</div>
               </div>
 
-              <div className="group text-center p-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl border border-blue-200/50 dark:border-blue-800/50 hover:shadow-xl hover:scale-105 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900/50 dark:to-blue-800/50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-200">
-                  <Clock className="w-8 h-8 text-blue-600" />
+              <div className="group text-center p-8 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl border border-blue-200/60 dark:border-blue-800/60 hover:shadow-2xl hover:scale-110 transition-all duration-500 hover:border-blue-300 dark:hover:border-blue-600">
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-500 dark:from-blue-600 dark:to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-125 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                  <Clock className="w-10 h-10 text-white" />
                 </div>
-                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">{animatedStats.onboardingTime}%</div>
-                <div className="text-gray-600 dark:text-gray-300 text-sm font-medium">Faster Onboarding</div>
+                <div className="text-5xl md:text-6xl font-bold text-blue-600 mb-3 group-hover:text-blue-700 transition-colors duration-300">{animatedStats.onboardingTime}%</div>
+                <div className="text-gray-700 dark:text-gray-300 text-base font-semibold">Faster Onboarding</div>
               </div>
 
-              <div className="group text-center p-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl border border-yellow-200/50 dark:border-yellow-800/50 hover:shadow-xl hover:scale-105 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-100 to-yellow-200 dark:from-yellow-900/50 dark:to-yellow-800/50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-200">
-                  <Star className="w-8 h-8 text-yellow-600" />
+              <div className="group text-center p-8 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl border border-yellow-200/60 dark:border-yellow-800/60 hover:shadow-2xl hover:scale-110 transition-all duration-500 hover:border-yellow-300 dark:hover:border-yellow-600">
+                <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-500 dark:from-yellow-600 dark:to-yellow-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-125 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                  <Star className="w-10 h-10 text-white" />
                 </div>
-                <div className="text-4xl md:text-5xl font-bold text-yellow-600 mb-2">{animatedStats.satisfaction.toFixed(1)}/5</div>
-                <div className="text-gray-600 dark:text-gray-300 text-sm font-medium">Satisfaction Rate</div>
+                <div className="text-5xl md:text-6xl font-bold text-yellow-600 mb-3 group-hover:text-yellow-700 transition-colors duration-300">{animatedStats.satisfaction.toFixed(1)}/5</div>
+                <div className="text-gray-700 dark:text-gray-300 text-base font-semibold">Satisfaction Rate</div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Testimonial Carousel */}
-      <div className="py-20 bg-gradient-to-r from-slate-50 to-gray-50 dark:from-gray-800 dark:to-gray-900">
+      {/* Enhanced Testimonials Section */}
+      <div className="py-24 bg-gradient-to-r from-slate-50 to-gray-50 dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Loved by Teams Worldwide
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              See what HR leaders and new hires say about Buddy
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              See what HR leaders and new hires say about Buddy's impact on their onboarding experience
             </p>
           </div>
 
-          <div className="relative max-w-4xl mx-auto">
-            {/* Testimonial Card */}
-            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center justify-center mb-8">
-                <Quote className="w-12 h-12 text-orange-500 opacity-50" />
-              </div>
-
-              <blockquote className="text-xl md:text-2xl font-medium text-gray-900 dark:text-white text-center mb-8 leading-relaxed">
-                "{testimonials[currentTestimonial].quote}"
-              </blockquote>
-
-              <div className="flex items-center justify-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-white font-bold text-lg">{testimonials[currentTestimonial].avatar}</span>
+          {/* Testimonials Grid - Shows 2-3 at once on desktop */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="group bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-8 border border-gray-200 dark:border-gray-700 hover:scale-105"
+              >
+                {/* Company Logo Placeholder */}
+                <div className="flex justify-between items-start mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-100 to-orange-200 dark:from-orange-900/30 dark:to-orange-800/30 rounded-xl flex items-center justify-center">
+                    <span className="text-orange-600 font-bold text-sm">
+                      {testimonial.company.charAt(0)}
+                    </span>
+                  </div>
+                  <Quote className="w-8 h-8 text-orange-500 opacity-60 group-hover:opacity-80 transition-opacity" />
                 </div>
-                <div className="text-center">
-                  <div className="font-semibold text-gray-900 dark:text-white">{testimonials[currentTestimonial].author}</div>
-                  <div className="text-gray-600 dark:text-gray-300 text-sm">{testimonials[currentTestimonial].role}</div>
-                  <div className="text-orange-600 font-medium text-sm">{testimonials[currentTestimonial].company}</div>
+
+                {/* Testimonial Quote */}
+                <blockquote className="text-lg font-medium text-gray-900 dark:text-white mb-6 leading-relaxed">
+                  "{testimonial.quote}"
+                </blockquote>
+
+                {/* Author Info */}
+                <div className="flex items-center">
+                  <div className="w-14 h-14 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-white font-bold text-lg">{testimonial.avatar}</span>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900 dark:text-white text-lg">
+                      {testimonial.author}
+                    </div>
+                    <div className="text-gray-600 dark:text-gray-300 text-sm">
+                      {testimonial.role}
+                    </div>
+                    <div className="text-orange-600 font-medium text-sm">
+                      {testimonial.company}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Star Rating */}
+                <div className="flex text-yellow-400 mt-4">
+                  <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
                 </div>
               </div>
-            </div>
+            ))}
+          </div>
 
-            {/* Navigation Dots */}
-            <div className="flex justify-center mt-8 space-x-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentTestimonial
-                      ? 'bg-orange-500 scale-125'
-                      : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400'
-                  }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                />
-              ))}
-            </div>
-
-            {/* Navigation Arrows */}
+          {/* Call to Action */}
+          <div className="text-center mt-12">
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Ready to transform your onboarding experience?
+            </p>
             <button
-              onClick={() => setCurrentTestimonial((currentTestimonial - 1 + testimonials.length) % testimonials.length)}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-all duration-300"
-              aria-label="Previous testimonial"
+              onClick={() => setShowLoginModal(true)}
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-orange-600 to-[#e99f75] hover:from-orange-700 hover:to-[#e99f75] text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
-              <ChevronLeft className="w-6 h-6 text-gray-600 dark:text-gray-300" />
-            </button>
-
-            <button
-              onClick={() => setCurrentTestimonial((currentTestimonial + 1) % testimonials.length)}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 w-12 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-all duration-300"
-              aria-label="Next testimonial"
-            >
-              <ChevronRight className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+              Join 500+ Companies
+              <ArrowRight className="w-5 h-5 ml-2" />
             </button>
           </div>
         </div>
@@ -437,44 +450,50 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Video Section */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Enhanced Video Section */}
             <div className="relative">
-              <div className="relative bg-gray-900 rounded-3xl overflow-hidden shadow-2xl group">
+              <div className="relative bg-gray-900 rounded-3xl overflow-hidden shadow-2xl group hover:shadow-3xl transition-all duration-500">
                 <div className="aspect-video bg-gradient-to-br from-gray-800 via-gray-900 to-black flex items-center justify-center relative overflow-hidden">
-                  {/* Animated background pattern */}
+                  {/* Enhanced Animated background pattern */}
                   <div className="absolute inset-0 opacity-20">
-                    <div className="absolute top-10 left-10 w-20 h-20 border border-orange-500 rounded-full animate-pulse"></div>
-                    <div className="absolute bottom-20 right-20 w-16 h-16 bg-orange-500/30 rounded-lg rotate-45 animate-bounce"></div>
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-orange-400/20 to-pink-400/20 rounded-full blur-xl"></div>
+                    <div className="absolute top-10 left-10 w-24 h-24 border-2 border-orange-500 rounded-full animate-pulse opacity-60"></div>
+                    <div className="absolute bottom-20 right-20 w-20 h-20 bg-orange-500/40 rounded-lg rotate-45 animate-bounce"></div>
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gradient-to-br from-orange-400/30 to-pink-400/30 rounded-full blur-xl animate-pulse"></div>
                   </div>
 
                   <div className="text-center relative z-10">
-                    <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <Play className="w-10 h-10 text-white ml-1" />
+                    {/* Bigger Play Button with Pulse Animation */}
+                    <div className="relative mb-8">
+                      <div className="w-28 h-28 bg-gradient-to-br from-orange-500 to-pink-500 rounded-full flex items-center justify-center mx-auto shadow-2xl animate-pulse hover:animate-none transition-all duration-300 group-hover:scale-110 group-hover:shadow-3xl">
+                        <Play className="w-12 h-12 text-white ml-1" />
+                      </div>
+                      {/* Pulsing ring effect */}
+                      <div className="absolute inset-0 rounded-full border-4 border-orange-400 animate-ping opacity-30"></div>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">Product Demo</h3>
-                    <p className="text-gray-300 mb-8 max-w-sm mx-auto">Interactive walkthrough of Buddy's AI-powered onboarding platform</p>
-                    <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-pink-600 transition-all duration-300 hover:shadow-lg hover:scale-105">
-                      <Play className="w-5 h-5 mr-2" />
+
+                    <h3 className="text-3xl font-bold text-white mb-4">Product Demo</h3>
+                    <p className="text-gray-300 mb-8 max-w-sm mx-auto text-lg">Interactive walkthrough of Buddy's AI-powered onboarding platform</p>
+                    <button className="inline-flex items-center px-10 py-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-bold text-lg rounded-xl hover:from-orange-600 hover:to-pink-600 transition-all duration-300 hover:shadow-2xl hover:scale-105">
+                      <Play className="w-6 h-6 mr-3" />
                       Watch Demo
                     </button>
                   </div>
                 </div>
 
-                {/* Video controls overlay */}
+                {/* Enhanced Video controls overlay */}
                 <div className="absolute bottom-6 left-6 right-6 flex justify-between items-center">
                   <div className="text-white text-sm font-medium">
                     <span>0:00</span> / <span className="text-gray-400">3:24</span>
                   </div>
                   <div className="flex space-x-3">
-                    <button className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-200" aria-label="Volume">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <button className="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110" aria-label="Volume">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072M18.364 5.636a9 9 0 010 12.728M12 6l-6 6H2a1 1 0 01-1-1V9a1 1 0 011-1h4l6-6v12l-6-6H2a1 1 0 01-1-1v-2a1 1 0 011-1h4z" />
                       </svg>
                     </button>
-                    <button className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-200" aria-label="Fullscreen">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <button className="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110" aria-label="Fullscreen">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 3h-6a1 1 0 00-1 1v6a1 1 0 001 1h6a1 1 0 001-1V4a1 1 0 00-1-1zM3 21h6a1 1 0 001-1v-6a1 1 0 00-1-1H3a1 1 0 00-1 1v6a1 1 0 001 1z" />
                       </svg>
                     </button>
@@ -483,56 +502,70 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Feature Highlights */}
+            {/* Enhanced Feature Highlights with Icons */}
             <div className="space-y-8">
               <div className="text-center lg:text-left">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                   Why Choose Buddy?
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-8">
-                  Experience the future of employee onboarding with our AI-powered platform.
+                <p className="text-lg text-gray-600 dark:text-gray-300 mb-10">
+                  Experience the future of employee onboarding with our AI-powered platform designed for modern workplaces.
                 </p>
               </div>
 
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-100 to-orange-200 dark:from-orange-900/50 dark:to-orange-800/50 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Sparkles className="w-6 h-6 text-orange-600" />
+              <div className="space-y-8">
+                <div className="flex items-start space-x-6 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-500 dark:from-orange-600 dark:to-orange-700 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-all duration-300">
+                    <Sparkles className="w-8 h-8 text-white" />
                   </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                      AI-Powered Guidance
+                  <div className="flex-1">
+                    <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                      🤖 AI-Powered Guidance
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      Intelligent chatbot answers questions instantly and guides users through complex processes with personalized assistance.
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                      Intelligent chatbot answers questions instantly and guides users through complex processes with personalized assistance and smart recommendations.
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900/50 dark:to-blue-800/50 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-blue-600" />
+                <div className="flex items-start space-x-6 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-500 dark:from-blue-600 dark:to-blue-700 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-all duration-300">
+                    <Clock className="w-8 h-8 text-white" />
                   </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                      Real-time Progress Tracking
+                  <div className="flex-1">
+                    <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                      📊 Real-Time Progress Tracking
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      Live dashboard updates show completion status, bottlenecks, and personalized recommendations for faster onboarding.
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                      Live dashboard updates show completion status, bottlenecks, and personalized recommendations for faster, more efficient onboarding.
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 dark:from-green-900/50 dark:to-green-800/50 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Shield className="w-6 h-6 text-green-600" />
+                <div className="flex items-start space-x-6 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-500 dark:from-green-600 dark:to-green-700 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-all duration-300">
+                    <Shield className="w-8 h-8 text-white" />
                   </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                      Role-Based Security
+                  <div className="flex-1">
+                    <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                      🔒 Role-Based Security
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      Enterprise-grade security with role-based access control, ensuring HR and employees see only relevant information.
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                      Enterprise-grade security with role-based access control, ensuring HR and employees see only relevant information in a compliant environment.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-6 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-500 dark:from-purple-600 dark:to-purple-700 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-all duration-300">
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                      👥 HR Insights & Analytics
+                    </h4>
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                      Comprehensive analytics and insights to optimize your onboarding process, track team performance, and make data-driven decisions.
                     </p>
                   </div>
                 </div>
@@ -657,82 +690,185 @@ export default function Home() {
 
           {/* Demo Carousel */}
           {/* Demo Login Section */}
-        <div className="mb-16 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-8 border border-blue-200 dark:border-blue-800">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="mb-16 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-8 border border-blue-200 dark:border-blue-800 shadow-lg">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
               🚀 Try the Demo
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
-              Experience our AI-powered onboarding platform with demo accounts
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Experience our AI-powered onboarding platform with demo accounts - no setup required!
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* HR Demo */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* HR Demo Card */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 group">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">HR Dashboard</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Manage onboarding processes</p>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">👨‍💼 HR Dashboard</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Manage onboarding processes & analytics</p>
                 </div>
               </div>
-              <div className="space-y-2 mb-4">
-                <div className="text-sm">
-                  <span className="font-medium text-gray-700 dark:text-gray-300">Email:</span>
-                  <code className="ml-2 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs">hr@acme.com</code>
+
+              <div className="space-y-4 mb-6">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Email:</span>
+                    <button
+                      className="group/copy relative"
+                      title="Click to copy email"
+                      onClick={() => navigator.clipboard.writeText('hr@acme.com')}
+                    >
+                      <code className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-lg text-sm hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors cursor-pointer">
+                        hr@acme.com
+                      </code>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover/copy:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                        Click to copy
+                      </div>
+                    </button>
+                  </div>
                 </div>
-                <div className="text-sm">
-                  <span className="font-medium text-gray-700 dark:text-gray-300">Password:</span>
-                  <code className="ml-2 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs">demo123</code>
+
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Password:</span>
+                    <button
+                      className="group/copy relative"
+                      title="Click to copy password"
+                      onClick={() => navigator.clipboard.writeText('demo123')}
+                    >
+                      <code className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-lg text-sm hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors cursor-pointer">
+                        demo123
+                      </code>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover/copy:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                        Click to copy
+                      </div>
+                    </button>
+                  </div>
                 </div>
               </div>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                Monitor employee progress, send reminders, add new hires, view analytics
-              </p>
+
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center text-sm text-green-600 dark:text-green-400">
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                  Monitor employee progress
+                </div>
+                <div className="flex items-center text-sm text-blue-600 dark:text-blue-400">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                  Send reminders & notifications
+                </div>
+                <div className="flex items-center text-sm text-purple-600 dark:text-purple-400">
+                  <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                  Add new hires & view analytics
+                </div>
+              </div>
+
+              <div className="text-center">
+                <button
+                  onClick={() => setShowLoginModal(true)}
+                  className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-orange-600 hover:to-red-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Try HR Demo →
+                </button>
+              </div>
             </div>
 
-            {/* Employee Demo */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {/* Employee Demo Card */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 group">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Employee Portal</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Complete onboarding tasks</p>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">👨‍💻 Employee Portal</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Complete onboarding tasks & get AI help</p>
                 </div>
               </div>
-              <div className="space-y-2 mb-4">
-                <div className="text-sm text-gray-700 dark:text-gray-300">
+
+              <div className="space-y-4 mb-6">
+                <div className="text-sm text-gray-700 dark:text-gray-300 mb-3">
                   Try any of these accounts:
                 </div>
-                <div className="space-y-1">
-                  <code className="block px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs">emily.chen@acme.com</code>
-                  <code className="block px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs">marcus.johnson@acme.com</code>
-                  <code className="block px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs">aria.nakamura@acme.com</code>
+                <div className="space-y-2">
+                  {[
+                    'emily.chen@acme.com',
+                    'marcus.johnson@acme.com',
+                    'aria.nakamura@acme.com'
+                  ].map((email) => (
+                    <button
+                      key={email}
+                      className="group/copy relative w-full text-left"
+                      title="Click to copy email"
+                      onClick={() => navigator.clipboard.writeText(email)}
+                    >
+                      <code className="block px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-sm hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors cursor-pointer w-full">
+                        {email}
+                      </code>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover/copy:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                        Click to copy
+                      </div>
+                    </button>
+                  ))}
                 </div>
-                <div className="text-sm">
-                  <span className="font-medium text-gray-700 dark:text-gray-300">Password:</span>
-                  <code className="ml-2 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs">demo123</code>
+
+                <div className="flex items-center justify-between pt-2 border-t border-gray-200 dark:border-gray-600">
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Password:</span>
+                  <button
+                    className="group/copy relative"
+                    title="Click to copy password"
+                    onClick={() => navigator.clipboard.writeText('demo123')}
+                  >
+                    <code className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-lg text-sm hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors cursor-pointer">
+                      demo123
+                    </code>
+                    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover/copy:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                      Click to copy
+                    </div>
+                  </button>
                 </div>
               </div>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                Complete tasks, chat with AI assistant, track progress, view achievements
-              </p>
+
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center text-sm text-orange-600 dark:text-orange-400">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+                  Complete interactive tasks
+                </div>
+                <div className="flex items-center text-sm text-cyan-600 dark:text-cyan-400">
+                  <span className="w-2 h-2 bg-cyan-500 rounded-full mr-2"></span>
+                  Chat with AI assistant
+                </div>
+                <div className="flex items-center text-sm text-pink-600 dark:text-pink-400">
+                  <span className="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
+                  Track progress & achievements
+                </div>
+              </div>
+
+              <div className="text-center">
+                <button
+                  onClick={() => setShowLoginModal(true)}
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Try Employee Demo →
+                </button>
+              </div>
             </div>
           </div>
 
-          <div className="text-center mt-8">
+          <div className="text-center mt-10">
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
               Click the <strong className="text-[#e99f75]">Sign In</strong> button in the navigation bar to get started!
             </p>
+            <div className="flex items-center justify-center space-x-2 text-xs text-gray-500 dark:text-gray-400">
+              <span>🔒</span>
+              <span>All demo data is temporary and resets automatically</span>
+            </div>
           </div>
         </div>
 
@@ -943,24 +1079,76 @@ export default function Home() {
             </div>
           </div>
 
-          {/* CTA Banner */}
+          {/* Social Proof & Awards */}
           <div className="py-8 border-t border-gray-800">
+            <div className="text-center mb-6">
+              <p className="text-gray-400 text-sm mb-4">Featured in</p>
+              <div className="flex items-center justify-center space-x-8 opacity-70">
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">TC</span>
+                  </div>
+                  <span className="text-gray-300 text-sm">TechCrunch</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">FR</span>
+                  </div>
+                  <span className="text-gray-300 text-sm">Forrester</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">HR</span>
+                  </div>
+                  <span className="text-gray-300 text-sm">HR Today</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">🏆</span>
+                  </div>
+                  <span className="text-gray-300 text-sm">Best in HR Tech 2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Enhanced CTA Banner */}
+          <div className="py-8 border-t border-gray-800 bg-gradient-to-r from-gray-800/50 to-gray-900/50">
             <div className="flex flex-col sm:flex-row items-center justify-between">
-              <div className="mb-4 sm:mb-0">
-                <h3 className="text-xl font-semibold text-white mb-2">
+              <div className="mb-6 sm:mb-0 text-center sm:text-left">
+                <h3 className="text-2xl font-bold text-white mb-2">
                   Ready to transform your onboarding?
                 </h3>
-                <p className="text-gray-400">
-                  Join thousands of companies using Buddy to onboard faster.
+                <p className="text-gray-300">
+                  Join 500+ companies using Buddy to onboard 40% faster.
                 </p>
+                <div className="flex items-center justify-center sm:justify-start space-x-4 mt-3">
+                  <div className="flex items-center text-green-400 text-sm">
+                    <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                    Free 14-day trial
+                  </div>
+                  <div className="flex items-center text-blue-400 text-sm">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                    No credit card required
+                  </div>
+                </div>
               </div>
-              <button
-                onClick={() => setShowLoginModal(true)}
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#e99f75] to-orange-600 hover:from-orange-700 hover:to-orange-700 text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-105"
-                aria-label="Book a demo"
-              >
-                Book a Demo →
-              </button>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <button
+                  onClick={() => setShowLoginModal(true)}
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#e99f75] to-orange-600 hover:from-orange-700 hover:to-orange-700 text-white font-bold text-lg rounded-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
+                  aria-label="Book a demo"
+                >
+                  🚀 Book a Demo
+                </button>
+                <button
+                  onClick={() => setShowLoginModal(true)}
+                  className="inline-flex items-center px-6 py-3 border-2 border-gray-600 hover:border-[#e99f75] text-gray-300 hover:text-[#e99f75] font-semibold rounded-lg transition-all duration-300 hover:shadow-lg"
+                  aria-label="Start free trial"
+                >
+                  Start Free Trial
+                </button>
+              </div>
             </div>
           </div>
 

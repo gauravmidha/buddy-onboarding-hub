@@ -1,0 +1,219 @@
+/* HR Copilot Custom Styles */
+
+/* Subtle separators */
+.hr-copilot-separator {
+  @apply border-gray-200 dark:border-gray-700;
+}
+
+/* Sticky footer shadows */
+.hr-copilot-footer-shadow {
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* High-contrast chips */
+.hr-copilot-status-chip {
+  @apply text-xs px-2 py-1 rounded-full font-medium border;
+}
+
+.hr-copilot-status-done {
+  @apply bg-green-50 text-green-700 border-green-200 dark:bg-green-900/20 dark:text-green-400 dark:border-green-800;
+}
+
+.hr-copilot-status-todo {
+  @apply bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-900/20 dark:text-blue-400 dark:border-blue-800;
+}
+
+.hr-copilot-status-blocked {
+  @apply bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-900/20 dark:text-amber-400 dark:border-amber-800;
+}
+
+/* Focus rings for accessibility */
+.hr-copilot-focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2;
+}
+
+/* Typing indicator animation */
+@keyframes hr-copilot-typing {
+  0%, 60%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+}
+
+.hr-copilot-typing-dot {
+  animation: hr-copilot-typing 1.4s ease-in-out infinite;
+}
+
+.hr-copilot-typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.hr-copilot-typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Message bubble animations */
+@keyframes hr-copilot-message-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hr-copilot-message-enter {
+  animation: hr-copilot-message-slide-in 0.3s ease-out;
+}
+
+/* Quick action pill hover effects */
+.hr-copilot-quick-action {
+  @apply transition-all duration-200 hover:scale-105 active:scale-95;
+}
+
+/* Drawer slide animation */
+@keyframes hr-copilot-drawer-slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.hr-copilot-drawer-enter {
+  animation: hr-copilot-drawer-slide-in 0.3s ease-out;
+}
+
+/* FAB pulse animation for notifications */
+@keyframes hr-copilot-fab-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.hr-copilot-fab-notification {
+  animation: hr-copilot-fab-pulse 2s ease-in-out infinite;
+}
+
+/* Resource panel collapsible animation */
+@keyframes hr-copilot-collapse {
+  from {
+    max-height: 500px;
+    opacity: 1;
+  }
+  to {
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes hr-copilot-expand {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+.hr-copilot-resource-collapsing {
+  animation: hr-copilot-collapse 0.3s ease-out forwards;
+}
+
+.hr-copilot-resource-expanding {
+  animation: hr-copilot-expand 0.3s ease-out forwards;
+}
+
+/* Tab transition effects */
+.hr-copilot-tab-transition {
+  @apply transition-all duration-200;
+}
+
+/* Loading skeleton animations */
+@keyframes hr-copilot-skeleton-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.hr-copilot-skeleton {
+  animation: hr-copilot-skeleton-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Scrollbar styling for chat area */
+.hr-copilot-chat-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.hr-copilot-chat-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.hr-copilot-chat-scroll::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.5);
+  border-radius: 2px;
+}
+
+.hr-copilot-chat-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .hr-copilot-message-user {
+    @apply border-2 border-gray-900;
+  }
+
+  .hr-copilot-message-assistant {
+    @apply border-2 border-gray-700;
+  }
+
+  .hr-copilot-focus-ring {
+    @apply focus:ring-4;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .hr-copilot-message-enter,
+  .hr-copilot-drawer-enter,
+  .hr-copilot-fab-notification,
+  .hr-copilot-typing-dot,
+  .hr-copilot-quick-action,
+  .hr-copilot-tab-transition {
+    animation: none;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .hr-copilot-drawer {
+    @apply w-full max-w-none;
+  }
+
+  .hr-copilot-message-bubble {
+    @apply max-w-[85%];
+  }
+}
+
+/* Dark mode specific adjustments */
+.dark .hr-copilot-chat-scroll::-webkit-scrollbar-thumb {
+  background: rgba(75, 85, 99, 0.5);
+}
+
+.dark .hr-copilot-chat-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(75, 85, 99, 0.7);
+}

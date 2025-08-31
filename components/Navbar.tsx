@@ -5,7 +5,12 @@ import { usePathname } from 'next/navigation';
 import { Home, Users, User, LogOut, LogIn, Moon, Sun, Settings } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { useTheme } from '@/hooks/useTheme';
-import { LoginModal } from './LoginModal';
+import { EMPLOYEE_UI_V2 } from '@/lib/flags';
+
+// Conditional import for feature flag
+const LoginModal = EMPLOYEE_UI_V2
+  ? require('./auth/SignInModal').SignInModal
+  : require('./LoginModal').LoginModal;
 import { useState } from 'react';
 
 export const Navbar = () => {
@@ -158,9 +163,9 @@ export const Navbar = () => {
       <LoginModal 
         isOpen={showLoginModal} 
         onClose={() => setShowLoginModal(false)} 
-        onLogin={(role, userData) => { 
-          login(role, userData); 
-          setShowLoginModal(false); 
+        onLogin={(role: 'hr' | 'employee', userData: any) => {
+          login(role, userData);
+          setShowLoginModal(false);
         }} 
       />
     </nav>

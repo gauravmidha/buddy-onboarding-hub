@@ -6,8 +6,8 @@ import { MetricsCards } from '@/components/MetricsCards';
 import { EmployeeTable } from '@/components/EmployeeTable';
 import { HRSummaryCard } from '@/components/HRSummaryCard';
 import { NewHireModal } from '@/components/NewHireModal';
-import HRAssistantDrawer from '@/components/hr/HRAssistantDrawer';
-import HRAssistantButton from '@/components/hr/HRAssistantButton';
+import { HRDrawer } from '@/components/hr-copilot/HRDrawer';
+import { Fab } from '@/components/hr-copilot/Fab';
 import { Button } from '@/components/ui/button';
 import { Plus, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
@@ -15,6 +15,8 @@ import { useToast } from '@/hooks/use-toast';
 export default function HRDashboardPage() {
   const { toast } = useToast();
   const [isAssistantOpen, setIsAssistantOpen] = useState(false);
+  const [employeeCount] = useState(42); // Mock data - in real app from API
+  const [atRiskCount] = useState(3); // Mock data - in real app from API
 
   const handleSendReminder = () => {
     toast({
@@ -194,16 +196,22 @@ export default function HRDashboardPage() {
           </div>
         </div>
 
-        {/* HR Assistant Drawer */}
-        <HRAssistantDrawer
+        {/* HR Copilot */}
+        <HRDrawer
           open={isAssistantOpen}
           onClose={handleCloseAssistant}
+          context={{
+            employeeCount,
+            atRiskCount,
+            // Add more context as needed
+          }}
         />
 
-        {/* Floating AI Button */}
-        <HRAssistantButton
+        {/* Floating Copilot Button */}
+        <Fab
           onClick={handleOpenAssistant}
           isOpen={isAssistantOpen}
+          hasNotifications={atRiskCount > 0}
         />
       </div>
     </ProtectedRoute>

@@ -20,6 +20,7 @@ export interface Task {
   estimated_time: string;
   employee_id: string;
   updated_at: string;
+  dueDate?: string;
 }
 
 export interface MetricData {
